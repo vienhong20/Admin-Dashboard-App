@@ -1,8 +1,8 @@
 import { useState } from "react";
-import FullCalendar, {formatDate } from "@fullcalendar/react";
+import FullCalendar, { formatDate } from "@fullcalendar/react";
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
-import { interactionPlugin } from "@fullcalendar/interaction";
+import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from '@fullcalendar/list';
 import {
     Box,
@@ -13,7 +13,6 @@ import {
     useTheme,
 } from "@mui/material";
 import Header from "../../components/Header";
-import { color } from "@mui/system";
 import { tokens } from "../../theme";
 
 const Calendar = () => {

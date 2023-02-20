@@ -143,7 +143,7 @@ const Dashboard = () => {
                     <Box>
                         <IconButton>
                             <DownloadOutlineIcon
-                            sx={{ fontSize; "26px", color: colors.greenAccent[500] }}/>
+                            sx={{ fontSize: "26px", color: colors.greenAccent[500] }}/>
                         </IconButton>
                     </Box>
                 </Box>
@@ -152,6 +152,10 @@ const Dashboard = () => {
                     <LineChart isDashboard={true} />
                 </Box>
                 
+                { /* TRANSACTIONS */}
+                <Box>
+
+                </Box>
             </Box>
         </Box>
     </Box>

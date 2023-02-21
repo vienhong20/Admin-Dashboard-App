@@ -12,14 +12,16 @@ import BarChart from "../../components/BarChart";
 import GeographyChart from "../../components/GeographyChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
-import { color } from "@mui/system";
 
 
 const Dashboard = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode)
+
     return (
     <Box m="20px">
+        {/* HEADER */}
+
         <Box display="flex" justifyContent="Space-between" alignItems="canter">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
         
@@ -108,7 +110,7 @@ const Dashboard = () => {
             >
                 <StatBox 
                 title="1,544,223"
-                subtitle="Traffic Inbound"
+                subtitle="Traffic Received"
                 progress="0.80"
                 increase="+43%"
                 icon={
@@ -125,7 +127,8 @@ const Dashboard = () => {
             gridRow="span 2"
             backgoundColor={colors.primary[400]}
             >
-                <Box mt="25px"
+                <Box 
+                mt="25px"
                 p="0 30px"
                 display="flex"
                 justifyContent="space-between"
@@ -134,7 +137,8 @@ const Dashboard = () => {
                     <Box>
                         <Typography variant="h5" 
                         fontWeight="600" 
-                        color={colors.grey[100]}>
+                        color={colors.grey[100]}
+                        >
                             Revenue Generated
                         </Typography>
                         <Typography variant="h3" 
@@ -154,7 +158,7 @@ const Dashboard = () => {
                 </Box>
 
                 <Box height="250px" 
-                    mt="-20px">
+                    mt="-20px 0 0 0">
                     <LineChart isDashboard={true} />
                 </Box>
                 </Box>
@@ -243,7 +247,7 @@ const Dashboard = () => {
                 </Typography>
                     <Box
                    height="250px"
-                    mt="20px" 
+                    mt="-20px" 
                     >
                         <BarChart isDashboard={true} />
                     </Box>
@@ -254,12 +258,11 @@ const Dashboard = () => {
             backgroundColor={colors.primary[400]}
             p="30px"
             >
-                <Typography variant="h5" fontWeight="600" sx={{ mb: "15px"}}>
+                <Typography variant="h5" fontWeight="600" sx={{ marginBottom: "15px"}}>
                     Geography Based Traffic
                 </Typography>
                     <Box
                    height="200px"
-                    mt="20px" 
                     >
                         <GeographyChart isDashboard={true} />
                     </Box>
